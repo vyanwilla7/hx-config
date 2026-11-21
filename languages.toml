@@ -1,0 +1,58 @@
+# lsp
+
+[language-server.clangd]
+command = "/usr/bin/clangd"
+args = ["--background-index"]
+
+[language-server.basedpyright]
+command = "/home/vyann/.local/share/nvim/mason/bin/basedpyright-langserver"
+args = ["--stdio"]
+
+[language-server.rust-analyzer]
+command = "/home/vyann/.local/share/nvim/mason/bin/rust-analyzer"
+[language-server.lua-language-server]
+command = "/home/vyann/.local/share/nvim/mason/bin/lua-language-server"
+
+[language-server.jdtls]
+command = "jdtls"
+
+
+[language-server.vscode-json-language-server]
+command = "/home/vyann/.local/share/nvim/mason/bin/vscode-json-language-server"
+args = ["--stdio"]
+
+[language-server.sqls]
+command = "sqls"
+
+# config language
+[[language]]
+name = "c"
+language-servers = ["clangd"]
+
+[[language]]
+name = "cpp"
+language-servers = ["clangd"]
+
+[[language]]
+name = "python"
+language-servers = ["basedpyright"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server"]
+
+[[language]]
+name = "java"
+language-servers = ["jdtls"]
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+
+[[language]]
+name = "sql"
+language-servers = ["sqls"]

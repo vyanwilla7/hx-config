@@ -1,0 +1,56 @@
+theme = "amberwood"
+
+[editor]
+line-number = "relative"
+mouse = true
+indent-heuristic = "tree-sitter"
+
+cursorline = true
+bufferline = "multiple"
+color-modes = true
+true-color = true
+auto-save = false
+auto-format = true
+clipboard-provider = "wayland"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+skip-levels = 0
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "version-control",
+  "file-name",
+  "file-modification-indicator"
+]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding"
+]
+separator = "│"
+
+[keys.normal]
+";" = "command_mode"
+
+[keys.normal.space]
+f = { f = "file_picker", g = "global_search", b = "buffer_picker" }
+t = { n = ":buffer-next", p = ":buffer-previous", c = ":buffer-close" }
+i = ":toggle lsp.display-inlay-hints"
+
+
+[editor.inline-diagnostics]
+cursor-line = "warning" 
+other-lines = "error"   
